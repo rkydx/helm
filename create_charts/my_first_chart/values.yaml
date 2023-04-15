@@ -1,17 +1,9 @@
-# Default values for my-first-chart.
+# Default values for my_first_chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-customblock:
-  author:
-    name: 
-      - "Edward"
-      - "Peter"
-      - "Mark"
-      - "Juan"
-      - "Camela"
-      - "Julia"
 
-replicaCount: 3
+replicaCount: 1
+
 image:
   repository: nginx
   pullPolicy: IfNotPresent
@@ -88,16 +80,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-mysql :
-  enabled : true
-  auth :
-    database : "my_custom_db"
-    username : "customowner"
-    password : "test12345"
-  primary :
-    service : 
-      type : NodePort
-
-rabbitmq :
-  enabled : true

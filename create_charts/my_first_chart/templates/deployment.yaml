@@ -1,18 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-  {{ .Values.mysql_image.repository }}
-
 metadata:
-  name: {{ include "my-first-chart.fullname" . }}
+  name: {{ include "my_first_chart.fullname" . }}
   labels:
-    {{- include "my-first-chart.labels" . | nindent 4 }}
+    {{- include "my_first_chart.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "my-first-chart.selectorLabels" . | nindent 6 }}
+      {{- include "my_first_chart.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -20,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "my-first-chart.selectorLabels" . | nindent 8 }}
+        {{- include "my_first_chart.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "my-first-chart.serviceAccountName" . }}
+      serviceAccountName: {{ include "my_first_chart.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
