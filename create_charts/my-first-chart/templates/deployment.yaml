@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
-  {{- .Values.customblock.author.name}}
-  {{- .Values.customblock.author.address}}
+  {{.Values.customblock.author.name}}
+  {{.Values.customblock.author.address}}
 
-  {{- "Value from Chart"}}
-  {{- .Chart.appVersion}}
-  {{- .Chart.keywords}}
-  {{- .Chart.maintainers.email}}
+  {{"Values from Chart"}}
+  {{.Chart.appVersion}}
+  {{.Chart.keywords}}
+  {{.Chart.maintainers.email}}
 
 
 metadata:
