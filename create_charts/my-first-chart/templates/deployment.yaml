@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-{{ $myVar := true }}
+{{ $myVar := .Values.autoscaling.enabled }}
 {{- if $myVar }}
 {{"Hi, I am with Variable True" | nindent 4 }}
 {{- else}}
