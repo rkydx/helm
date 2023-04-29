@@ -13,7 +13,7 @@ author:
 {{- toYaml . | nindent 4 }}
 # {{- else}}
 # {{"Hi, I am without with Block." | nindent 4}}
-{{ - end }}
+{{- end }}
 
 {{- range .Values.customblock.author.name}}
 author:
