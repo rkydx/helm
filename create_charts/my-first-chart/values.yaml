@@ -98,7 +98,7 @@ mysql:
     password: "test12345"
   primary:
     service:
-    type: NodePort
+      type: NodePort
 
 rabbitmq:
   enabled: true  
