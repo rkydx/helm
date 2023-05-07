@@ -39,4 +39,5 @@ dependencies:
   - name: rabbitmq
     version: 11.14.4
     repository: "https://charts.bitnami.com/bitnami"
+    condition: rabbitmq.enabled
     
