@@ -32,12 +32,12 @@ appVersion: "1.16.0"
 
 dependencies:
   - name: mysql
-    version: "9.9.0"
+    version: "9.4.5"
     repository: "https://charts.bitnami.com/bitnami"
     condition: mysql.enabled
 
   - name: rabbitmq
-    version: 11.14.4
+    version: 11.2.2
     repository: "https://charts.bitnami.com/bitnami"
     condition: rabbitmq.enabled
     
