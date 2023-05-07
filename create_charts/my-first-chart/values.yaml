@@ -96,9 +96,9 @@ mysql:
     database: "my_custom_db"
     username: "customowner"
     password: "test12345"
-    primary:
-      service:
-        type: NodePort
+  primary:
+    service:
+    type: NodePort
 
 rabbitmq:
   enabled: true  
